@@ -1,0 +1,17 @@
+product :ResidentialProperty
+ entities
+    has_one :Insured
+    has_one :Policy
+    has_many :Premises
+    has_one :PremiumQuoteBreakdown
+ endentities
+ coverages
+    has_one :BookDebtsCover
+    has_one :BuildingsCover
+    has_one :ContentsCover
+    has_one :EmployersLiabilityCover
+    has_one :GlassCover
+    has_one :PropertyOwnersLiabilityCover
+    has_one :PublicLiabilityCover
+  endcoverages 
+endproduct

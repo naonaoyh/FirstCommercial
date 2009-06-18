@@ -1,0 +1,5 @@
+coverage :EmployersLiabilityCover
+    use :CoverDetail,:Employee
+    use :CoverDetail,:Declaration,:PowerWoodworkingMachineryInd,:Value
+    use :CoverDetail,:PremiumQuoteBreakdown,:GrossAmount
+endcoverage

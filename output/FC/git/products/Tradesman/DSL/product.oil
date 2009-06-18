@@ -1,0 +1,9 @@
+product :Tradesman
+ entities
+    has_one :Insured
+    has_one :PremiumQuoteBreakdown
+ endentities
+ coverages
+    has_one :EmployersLiabilityCover
+  endcoverages 
+endproduct

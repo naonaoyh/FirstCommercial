@@ -1,0 +1,5 @@
+entity :Insured
+    use :Address, :Postcode
+    use :TradeCode,:ShortDescription
+    use :EmailAddress
+endentity

@@ -1,0 +1,55 @@
+layout 21
+	
+    columns
+    
+    column 1
+
+        widget :logo
+        endwidget
+
+        widget :submit_panel
+
+            widget :page_title, {:title => :retailer_insurance_premium_addons_title}
+            endwidget
+
+            widget :progress_bar,{:currentStep => '2',:step1 => :your_details_step_title,:step2 => :your_quote_step_title,:step3 => :summary_step_title, :step4 => :payment_step_title }
+            endwidget
+
+            columns
+                column
+                    widget :extending_panel,{:title => :your_monthly_quote, :readonly => true}                        
+                        entity :PremiumQuoteBreakdown,{:show => 'GrossAmount&IPTAmount'}
+                    endwidget
+                endcolumn
+                column
+                    widget :extending_panel,{:title => :your_annual_quote, :readonly => true}                        
+                        entity :PremiumQuoteBreakdown,{:show => 'GrossAmount&IPTAmount'}                        
+                    endwidget
+                endcolumn
+            endcolumns
+
+            widget :extending_panel,{:title => :modifications_panel_title}
+                coverage :PublicLiabilityCover,{:hide => 'PremiumQuoteBreakdown&Excess'}
+                coverage :BusinessInterruptionCover,{:hide => 'PremiumQuoteBreakdown&Excess'}
+                coverage :MoneyCover,{:hide => 'PremiumQuoteBreakdown&Excess'}
+		coverage :GlassCover,{:hide => 'PremiumQuoteBreakdown&Excess'}
+                coverage :BookDebtsCover,{:hide => 'PremiumQuoteBreakdown&Excess'}
+		entity   :ItemInOpen
+                coverage :LossOfLicenceCover,{:hide => 'PremiumQuoteBreakdown&Excess'}
+            endwidget
+
+            widget :button_panel
+            endwidget
+
+         endwidget
+    endcolumn
+	
+	column 2
+	endcolumn
+    
+    endcolumns
+    
+    footer
+    endfooter
+    
+endlayout 

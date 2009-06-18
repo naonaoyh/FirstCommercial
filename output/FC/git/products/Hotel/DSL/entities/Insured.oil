@@ -1,0 +1,9 @@
+entity :Insured
+    use :Address, :Postcode
+    use :CompanyEstablishedDate
+    use :TradeCode,:ShortDescription
+    use :Turnover
+    use :Turnover,:Detail
+    use :EmployeeWages
+    use :EmailAddress
+endentity

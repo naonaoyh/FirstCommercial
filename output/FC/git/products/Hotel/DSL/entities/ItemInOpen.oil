@@ -1,0 +1,5 @@
+entity :ItemInOpen
+    use :Capacity
+    use :ATMInd,:Value
+    use :NonResidentsInd
+endentity

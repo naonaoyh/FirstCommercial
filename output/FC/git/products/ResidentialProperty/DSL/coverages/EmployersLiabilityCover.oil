@@ -1,0 +1,5 @@
+coverage :EmployersLiabilityCover
+    use :CoverRequiredInd  #conditionality of fields displayed based on this indicator to be implemented in library.
+    use :CoverDetail,:SumInsured,:Amount#{:default_value => '10000000'}
+    use :CoverDetail,:PremiumQuoteBreakdown,:GrossAmount
+endcoverage

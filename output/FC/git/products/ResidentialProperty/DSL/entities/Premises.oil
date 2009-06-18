@@ -1,0 +1,8 @@
+entity :Premises
+    use :Address
+    use :UnusedInd,:Value
+    use :TypeCode,:ShortDescription
+    use :NoOfFlats #conditional on value above containing flats
+    use :ConcreteFloorConstruction,:NoOfStoreys
+    use :WoodenFloorConstruction,:NoOfStoreys
+endentity

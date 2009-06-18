@@ -1,0 +1,8 @@
+coverage :ContentsCover
+    use :CoverDetail,:TargetStock,:SumInsured,:Amount 
+    	#for_ABI_codes (B550_212-ComputerEquipment)
+    use :CoverDetail,:OtherStock,:SumInsured,:Amount
+    	#for_ABI_codes (B550_570-RefrigeratedContents)
+    use :CoverDetail,:SumInsured,:Amount
+    use :CoverDetail,:PremiumQuoteBreakdown,:GrossAmount
+endcoverage

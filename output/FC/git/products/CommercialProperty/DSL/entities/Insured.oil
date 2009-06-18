@@ -1,0 +1,3 @@
+entity :Insured
+    use :EmailAddress
+endentity

@@ -1,0 +1,12 @@
+entity :Driver
+    #use :IndividualName,:Title,:CodeShortDescription
+    use :IndividualName,:FirstForename
+    use :IndividualName,:Surname
+    use :BirthDate
+    use :OccupationCode,:ShortDescription
+    use :DrivingLicence,:Code,:ShortDescription
+    use :DrivingLicence,:FirstObtainedDate
+    #use :Address,:Postcode
+    use :Declaration,:LossesInd,:Value
+    use :Declaration,:ConvictionsInd,:Value
+endentity

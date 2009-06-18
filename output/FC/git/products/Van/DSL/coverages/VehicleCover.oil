@@ -1,0 +1,4 @@
+coverage :VehicleCover
+    use :CoverCode,:ShortDescription
+    use :Excess:,Amount
+endcoverage

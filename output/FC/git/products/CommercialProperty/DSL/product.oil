@@ -1,0 +1,12 @@
+product :CommercialProperty
+ entities
+    has_many :Premises
+    has_one :Insured
+    has_one :PremiumQuoteBreakdown
+ endentities
+ coverages
+    has_one :BuildingsCover
+    has_one :ContentsCover
+    has_one :GlassCover
+ endcoverages 
+endproduct

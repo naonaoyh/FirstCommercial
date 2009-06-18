@@ -1,0 +1,8 @@
+coverage :BuildingsCover
+    use :CoverDetail,:SumInsured,:Amount
+    use :CoverDetail,:Excess,:Amount#{:default_value => '200'}
+    use :CoverDetail,:RentPayable,:CoverRequiredInd  #conditionality of fields displayed based on this indicator to be implemented in library.
+    use :CoverDetail,:RentPayable,:CoverDetail,:SumInsured,:Amount #used for rent receivable
+    use :CoverDetail,:RentPayable,:CoverDetail,:IndemnityPeriod
+    use :CoverDetail,:PremiumQuoteBreakdown,:GrossAmount
+endcoverage

@@ -1,0 +1,4 @@
+entity :ItemInOpen
+    use :Capacity
+    use :ATMInd,:Value
+endentity

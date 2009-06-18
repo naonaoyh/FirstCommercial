@@ -1,0 +1,5 @@
+coverage :ContentsCover
+    use :CoverRequiredInd
+    use :CoverDetail,:SumInsured,:Amount
+    use :CoverDetail,:PremiumQuoteBreakdown,:GrossAmount
+endcoverage

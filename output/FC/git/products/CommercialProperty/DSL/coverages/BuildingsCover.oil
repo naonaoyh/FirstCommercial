@@ -1,0 +1,6 @@
+coverage :BuildingsCover
+    use :CoverDetail,:SumInsured,:Amount
+    use :CoverDetail,:RentPayable,:CoverRequiredInd
+    use :CoverDetail,:RentPayable,:CoverDetail,:SumInsured,:Amount
+    use :CoverDetail,:PremiumQuoteBreakdown,:GrossAmount
+endcoverage

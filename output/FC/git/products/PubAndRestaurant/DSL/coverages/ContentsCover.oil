@@ -1,0 +1,11 @@
+coverage :ContentsCover
+    use :CoverDetail,:OtherStock,:SumInsured,:Amount#{:default_value => '10000'}
+    use :CoverDetail,:OtherStock,:Excess,:Amount#{:default_value => '100'}
+    use :CoverDetail,:TargetStock,:SumInsured,:Amount#{:default_value => '1000'}#, :ABI_code => 'B550 002', :ABI_desc => 'Wines Fortified Wines And Spirits'}
+    use :CoverDetail,:TargetStock,:Excess,:Amount#{:default_value => '100'}#, :ABI_code => 'B550 002', :ABI_desc => 'Wines Fortified Wines And Spirits'}
+    #use :CoverDetail,:TargetStock,:SumInsured,:Amount#{:default_value => '1000'}#, :ABI_code => 'B550 001', :ABI_desc => 'Cigarettes Cigars And Tobacco '}
+    #use :CoverDetail,:TargetStock,:Excess,:Amount#{:default_value => '100'}#, :ABI_code => 'B550 001', :ABI_desc => 'Cigarettes Cigars And Tobacco '}
+    use :CoverDetail,:OtherContents,:SumInsured,:Amount#{:default_value => '20000'}
+    use :CoverDetail,:OtherContents,:Excess,:Amount#{:default_value => '200'}
+    use :CoverDetail,:PremiumQuoteBreakdown,:GrossAmount
+endcoverage

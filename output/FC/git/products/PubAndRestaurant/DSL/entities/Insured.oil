@@ -1,0 +1,25 @@
+entity :Insured
+    use :IndividualName,:TitleCode,:ShortDescription
+    use :IndividualName,:FirstForename
+    use :IndividualName,:Surname
+    use :CompanyName
+    use :CompanyEstablishedDate
+    use :CompanyStatusCode,:ShortDescription
+    use :TradeCode,:ShortDescription
+    use :Address
+    #use :Income,:Turnover,:Amount
+    use :Turnover,:Detail,:TurnoverAmount
+    use :Turnover,:Detail,:Turnover,:ActivityCode,:Value
+    use :Turnover,:Detail,:Turnover,:ActivityCode,:ShortDescription #Meals and Snacks
+    use :Turnover,:Detail,:TurnoverAmount
+    use :Turnover,:Detail,:Turnover,:ActivityCode,:Value
+    use :Turnover,:Detail,:Turnover,:ActivityCode,:ShortDescription #Drinks
+    use :Turnover,:Detail,:TurnoverAmount
+    use :Turnover,:Detail,:Turnover,:ActivityCode,:Value
+    use :Turnover,:Detail,:Turnover,:ActivityCode,:ShortDescription #Entertainment & Funcitons
+    use :Turnover,:Detail,:TurnoverAmount
+    use :Turnover,:Detail,:Turnover,:ActivityCode,:Value
+    use :Turnover,:Detail,:Turnover,:ActivityCode,:ShortDescription #Accommodation
+    use :EmployeeWages
+    use :EmailAddress
+endentity

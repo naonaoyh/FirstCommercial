@@ -1,0 +1,8 @@
+coverage :ContentsCover
+    use :CoverDetail,:TargetStock,:SumInsured,:Amount #for_ABI_codes (B550_212-ComputerEquipment)
+    use :CoverDetail,:OtherStock,:SumInsured,:Amount #for_ABI_codes (B205_222-DocumentsAndPlans)
+    #use :CoverDetail,:OtherStock,:SumInsured,:Amount #for_ABI_codes (B550_021-GoodsInTrust)
+    #use :CoverDetail,:OtherStock,:SumInsured,:Amount
+    use :CoverDetail,:SumInsured,:Amount
+    use :CoverDetail,:PremiumQuoteBreakdown,:GrossAmount
+endcoverage

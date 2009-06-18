@@ -1,0 +1,4 @@
+entity :ItemInOpen
+    use :ATMInd,:Value
+    use :PurposeBuiltInd,:Value
+endentity

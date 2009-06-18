@@ -1,0 +1,64 @@
+layout 21
+
+        widget :logo
+        endwidget
+	
+    columns
+    
+    column 1
+
+         widget :page_title,{:title => :retailer_insurance_risk_data_title}
+         endwidget
+
+         widget :progress_bar,{:currentStep => 1,:step1 => :your_details_step_title,:step2 => :your_quote_step_title,:step3 => :payment_step_title }
+         endwidget
+
+         widget :narration_text,{ :text => :risk_data_collect_intro }
+         endwidget
+
+         widget :submit_panel
+
+            widget :extending_panel,{:title => :your_business_panel_title}
+                widget :narration_text,{ :text => :your_business_intro }
+                endwidget
+                entity :Insured,{:hide => 'IndividualName&TelephoneNo', :columns => 2}
+            endwidget
+
+            widget :extending_panel, {:title => :mandatory_cover_panel_title}
+                widget :narration_text,{ :text => :mandatory_cover_intro }
+                endwidget
+                coverage :EmployersLiabilityCover,{:hide => 'Excess&PremiumQuoteBreakdown'}
+                entity :Policy,{:hide => 'PolicyNumber&EndDate'}
+            endwidget
+
+            widget :extending_panel, {:title => :optional_cover_panel_title}
+                widget :narration_text,{ :text => :optional_cover_intro }
+                endwidget
+                coverage :BuildingsCover,{:hide => 'Excess', :columns => 2}
+                coverage :ContentsCover,{:hide => 'Excess', :columns => 2}
+                coverage :BusinessInterruptionCover,{:hide => 'Excess', :columns => 2}
+                coverage :MoneyCover,{:hide => 'Excess', :columns => 2}
+                coverage :ProductLiabilityCover,{:hide => 'Excess', :columns => 2}
+                coverage :PublicLiabilityCover,{:hide => 'Excess', :columns => 2}
+            endwidget
+
+            widget :button_panel
+            endwidget
+
+          endwidget
+    endcolumn
+
+    column 2
+    endcolumn
+    
+    endcolumns
+    
+    footer
+      widget :sitemap
+      endwidget
+      widget :legal_notice, {:text => :legal_notice}
+      endwidget
+
+    endfooter
+    
+endlayout 

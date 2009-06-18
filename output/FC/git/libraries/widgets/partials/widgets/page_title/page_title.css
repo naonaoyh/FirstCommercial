@@ -1,0 +1,10 @@
+.pagetitle{
+  background-color: rgb(59,89,152);
+  margin-bottom: 10px;
+  padding: 5px;
+  color: white;
+  display: block;
+  font-size: 16px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}

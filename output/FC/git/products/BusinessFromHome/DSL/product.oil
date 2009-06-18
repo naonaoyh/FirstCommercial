@@ -1,0 +1,9 @@
+product :BusinessFromHome
+ entities
+    has_one :Insured
+    has_one :PremiumQuoteBreakdown
+ endentities
+ coverages
+    has_one :ContentsCover
+  endcoverages 
+endproduct

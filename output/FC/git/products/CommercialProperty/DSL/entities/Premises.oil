@@ -1,0 +1,6 @@
+entity :Premises
+    use :Address, :Postcode
+    use :UseCode
+    use :ConcreteFloorConstruction,:NoOfStoreys
+    use :WoodenFloorConstruction,:NoOfStoreys
+endentity

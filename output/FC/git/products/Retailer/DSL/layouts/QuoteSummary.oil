@@ -1,0 +1,65 @@
+layout 21	
+    columns
+    
+    column 1
+
+        widget :logo
+        endwidget
+
+        widget :submit_panel
+
+            widget :page_title, {:title => :retailer_insurance_policy_summary_title}
+            endwidget
+
+            widget :progress_bar,{:currentStep => '3',:step1 => :your_details_step_title,:step2 => :your_quote_step_title,:step3 => :summary_step_title, :step4 => :payment_step_title }
+            endwidget
+
+            widget :narration_text,{:text => :summary}
+            endwidget
+
+            widget :extending_panel,{:title => :primary_contact_details_panel_title}
+                entity :Insured,{:columns => 2}
+            endwidget
+
+            columns
+                column
+                    widget :extending_panel,{:title => :your_monthly_quote}
+                        widget :premium, {:deposit => 121.33, :first_instalment => 60.74, :subsequent_instalments => 60.69, :apr => 0, :total_amount_payable => 728.28}
+                        endwidget
+                    endwidget
+                endcolumn
+                column
+                    widget :extending_panel,{:title => :your_annual_quote}
+                        widget :premium, {:deposit => 121.33, :first_instalment => 60.74, :subsequent_instalments => 60.69, :apr => 0, :total_amount_payable => 728.28}
+                        endwidget
+                    endwidget
+                endcolumn
+            endcolumns
+
+            widget :extending_panel,{:title => :your_cover_breakdown_panel_title, :editable => true}
+                entity :Policy,{:hide => 'PolicyNumber&EndDate'}
+                coverage :EmployersLiabilityCover,{:hide => 'PremiumQuoteBreakdown'}
+                coverage :BuildingsCover,{:hide => 'CoverRequiredInd&PremiumQuoteBreakdown',:columns => 2}
+                coverage :MoneyCover,{:hide => 'PremiumQuoteBreakdown',:columns => 2}
+                coverage :BookDebtsCover,{:hide => 'PremiumQuoteBreakdown',:columns => 2}
+                coverage :PublicLiabilityCover,{:hide => 'PremiumQuoteBreakdown',:columns => 2}
+                coverage :ProductLiabilityCover,{:hide => 'PremiumQuoteBreakdown',:columns => 2}
+                coverage :GlassCover,{:hide => 'PremiumQuoteBreakdown',:columns => 2}
+                coverage :ContentsCover,{:hide => 'PremiumQuoteBreakdown',:columns => 2}
+            endwidget
+
+            widget :button_panel
+                endwidget
+
+            endwidget
+    endcolumn
+	
+	column 2
+	endcolumn
+    
+    endcolumns
+    
+    footer
+    endfooter
+    
+endlayout 

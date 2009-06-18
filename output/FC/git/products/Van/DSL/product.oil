@@ -1,0 +1,11 @@
+product :Van
+ entities
+    has_many :Driver
+    has_one :Policy
+    has_one :PremiumQuoteBreakdown
+    has_one :Vehicle
+ endentities
+ coverages
+    has_one :LegalExpensesCover
+ endcoverages 
+endproduct
